@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		C67FD8C82AE726E900A9A913 /* EventTapBugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67FD8C72AE726E900A9A913 /* EventTapBugApp.swift */; };
-		C67FD8CA2AE726E900A9A913 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67FD8C92AE726E900A9A913 /* ContentView.swift */; };
 		C67FD8CC2AE726EA00A9A913 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67FD8CB2AE726EA00A9A913 /* Assets.xcassets */; };
 		C67FD8CF2AE726EA00A9A913 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67FD8CE2AE726EA00A9A913 /* Preview Assets.xcassets */; };
+		C67FD8D82AE72E4200A9A913 /* EventTap.c in Sources */ = {isa = PBXBuildFile; fileRef = C67FD8D72AE72E4200A9A913 /* EventTap.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C67FD8C42AE726E900A9A913 /* EventTapBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventTapBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67FD8C72AE726E900A9A913 /* EventTapBugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTapBugApp.swift; sourceTree = "<group>"; };
-		C67FD8C92AE726E900A9A913 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C67FD8CB2AE726EA00A9A913 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C67FD8CE2AE726EA00A9A913 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C67FD8D02AE726EA00A9A913 /* EventTapBug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EventTapBug.entitlements; sourceTree = "<group>"; };
+		C67FD8D62AE72E4100A9A913 /* EventTapBug-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventTapBug-Bridging-Header.h"; sourceTree = "<group>"; };
+		C67FD8D72AE72E4200A9A913 /* EventTap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EventTap.c; sourceTree = "<group>"; };
+		C67FD8F52AE8484A00A9A913 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 		C67FD8BB2AE726E900A9A913 = {
 			isa = PBXGroup;
 			children = (
+				C67FD8F52AE8484A00A9A913 /* README.md */,
 				C67FD8C62AE726E900A9A913 /* EventTapBug */,
 				C67FD8C52AE726E900A9A913 /* Products */,
 			);
@@ -53,7 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				C67FD8C72AE726E900A9A913 /* EventTapBugApp.swift */,
-				C67FD8C92AE726E900A9A913 /* ContentView.swift */,
+				C67FD8D62AE72E4100A9A913 /* EventTapBug-Bridging-Header.h */,
+				C67FD8D72AE72E4200A9A913 /* EventTap.c */,
 				C67FD8CB2AE726EA00A9A913 /* Assets.xcassets */,
 				C67FD8D02AE726EA00A9A913 /* EventTapBug.entitlements */,
 				C67FD8CD2AE726EA00A9A913 /* Preview Content */,
@@ -101,6 +105,7 @@
 				TargetAttributes = {
 					C67FD8C32AE726E900A9A913 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 					};
 				};
 			};
@@ -139,7 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67FD8CA2AE726E900A9A913 /* ContentView.swift in Sources */,
+				C67FD8D82AE72E4200A9A913 /* EventTap.c in Sources */,
 				C67FD8C82AE726E900A9A913 /* EventTapBugApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +275,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EventTapBug/EventTapBug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -288,6 +294,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.latencyzero.EventTapBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EventTapBug/EventTapBug-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -297,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EventTapBug/EventTapBug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -315,6 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.latencyzero.EventTapBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "EventTapBug/EventTapBug-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
